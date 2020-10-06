@@ -16,9 +16,8 @@ b) Quadratic model
 * Solve system of linear equations -> Get 𝑥_𝑖, 𝑦_𝑖
 * Recursive partitioning to resolve gate clustering :Assign, Contain, Solve, repeat …
 
-![](https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/Steps.png?raw=false)
 
-<img src=https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/Steps.png width= 400 />
+<img src=https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/Steps.png width= 800 />
 
 ## Code 
 ### Graph class 
@@ -39,4 +38,4 @@ Conjugate gradient iterative solver
 
 
 ## Flowchart
-![](https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/FlowChartAndTraversal.png?raw=true)
+<img src=https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/FlowChartAndTraversal.png width=800/>
