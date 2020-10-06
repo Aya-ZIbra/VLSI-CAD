@@ -2,10 +2,11 @@
 A basic implementation of analytical gate placer
 
 ## Placer Types: Randomized vs Analytical
-Simulated Annealing
+Randomized type uses Simulated Annealing. In this implementation, we are considering an analytical placer.
 ## Wire estimation models
-### Half Perimeter Wire Length (HPWL)
-### Quadratic model 
+Two popular models are: 
+a) Half Perimeter Wire Length (HPWL)
+b) Quadratic model 
 
 ## Iterative quadratic placer
 * Based on quadratic wire length estimation
@@ -14,7 +15,10 @@ Simulated Annealing
 * L = Lmin when derivatives = 0
 * Solve system of linear equations -> Get 𝑥_𝑖, 𝑦_𝑖
 * Recursive partitioning to resolve gate clustering :Assign, Contain, Solve, repeat …
-![](https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/Steps.png?raw=true)
+
+![](https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/Steps.png?raw=false)
+
+<img src=https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/Steps.png width= 400 />
 
 ## Code 
 ### Graph class 
