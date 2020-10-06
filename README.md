@@ -36,6 +36,10 @@ b) Quadratic model
 Conjugate gradient iterative solver
 [A] is sparse matrix (sparse matrix representation)
 
+## Build
+```
+g++ -o main main.cpp solver.cpp 
+```
 
 ## Flowchart
 <img src=https://github.com/Aya-ZIbra/VLSI-CAD/blob/master/Doc_Resources/FlowChartAndTraversal.png width=800/>
