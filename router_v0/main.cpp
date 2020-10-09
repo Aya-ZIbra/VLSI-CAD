@@ -8,11 +8,9 @@ using namespace std;
 int main(){
     cout<<"VLSI Router starting ..." <<endl;
     grid G;
-    G.size_x = 5;
-    G.size_y = 5;
-    G.resize_mat();
-    G.print(cout);
 
+    G.read_grid("bench1.grid");
+    //G.print(cout);
     // Input Pins location
     location S_pos {1,1,1};
     location T_pos {3,3,1};
@@ -29,6 +27,6 @@ int main(){
     
     // III.clean up
     G.cleanup(route);
-    G.print(cout);
+    //G.print(cout);
     return 0;
-}
+} 

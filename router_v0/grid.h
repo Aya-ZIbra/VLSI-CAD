@@ -6,6 +6,8 @@
 #include <queue>
 #include <array>
 #include <stack>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 class cell{
@@ -33,6 +35,7 @@ class grid{
     public:
         vector<vector<cell>> mat; //matrix of cells
         int size_x, size_y; // number of cells in x and y direction
+        int bendPenalty, viaPenalty;
         void resize_mat();
         void read_grid(const char *fname);
         void print(ostream & os);

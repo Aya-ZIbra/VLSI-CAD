@@ -39,6 +39,29 @@ void grid::print(ostream & os){
     }
 }
 
+void grid::read_grid(const char *fname){
+    ifstream fs {fname};
+    if (!fs) {
+        cerr << "cannot open file " << fname << endl;
+        exit(1);
+    }
+
+    string line;
+    if (getline(fs,line)){
+        istringstream iss(line);
+        iss >> size_x >> size_y >> bendPenalty>> viaPenalty;
+        cout << size_x << '\t' << size_y << '\t' << bendPenalty << viaPenalty << endl;
+    }
+    resize_mat();
+    for (int j=0; j<size_y; j++){
+        getline(fs,line);
+        istringstream iss(line);
+        int i=0;
+        while(iss >> mat[j][i].cost) {
+            i++;
+        }
+    }
+}
 
 void grid::fill_BFS(const location &loc_S, const location &loc_T){ 
     int cost_S = mat[loc_S.y][loc_S.x].cost;
@@ -67,6 +90,11 @@ void grid::fill_BFS(const location &loc_S, const location &loc_T){
             // check if not already expanded
             if (isInsideSearchSpace(loc) && !isBlocked(loc) && !isExpanded(loc)){
                 if (!isExplored(loc)){
+                    /**  when modeling the grid as a graph, all the edges leading to a cell X are equal cost
+                     * edges = cell.cost
+                     * Result: lowest pathcost to this cell is the one calculated when the cell is first explored
+                     * Hence, no need for key update as in general Dijkstra's SSSP. 
+                     * */
                     int pathcost = evaluatePathcost(v,loc, loc_T);
                     vertex v_adj = {pathcost, loc}; 
                     q.push(v_adj);
